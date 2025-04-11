@@ -1,0 +1,23 @@
+<h2>My Tasks</h2>
+<a class="btn btn-primary mb-3" href="/tasks/add">Add New Task</a>
+
+{{#each tasks}}
+  <div class="card mb-2 {{#if completed}}border-success{{else if (isDueSoon dueDate)}}border-warning{{/if}}">
+    <div class="card-body">
+      <h5 class="card-title">{{title}} {{#if completed}}✅{{/if}}</h5>
+      {{#if notes}}<p>{{notes}}</p>{{/if}}
+      <p>
+        <strong>Due:</strong> {{dueDate}} <br>
+        <strong>Priority:</strong> {{priority}}
+      </p>
+      <div class="d-flex gap-2">
+        <a class="btn btn-sm btn-warning" href="/tasks/edit/{{_id}}">Edit</a>
+        <form method="POST" action="/tasks/delete/{{_id}}" style="display:inline;">
+          <button class="btn btn-sm btn-danger" onclick="return confirm('Delete this task?')">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+{{else}}
+  <p>No tasks yet. Add one now!</p>
+{{/each}}

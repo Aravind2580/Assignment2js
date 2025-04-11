@@ -1,0 +1,24 @@
+<h2>Add Task</h2>
+<form method="POST" action="/tasks/add">
+  <div class="mb-3">
+    <label>Title</label>
+    <input class="form-control" type="text" name="title" required>
+  </div>
+  <div class="mb-3">
+    <label>Due Date</label>
+    <input class="form-control" type="date" name="dueDate">
+  </div>
+  <div class="mb-3">
+    <label>Priority</label>
+    <select class="form-control" name="priority">
+      <option>Low</option>
+      <option>Medium</option>
+      <option>High</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Notes</label>
+    <textarea class="form-control" name="notes"></textarea>
+  </div>
+  <button class="btn btn-success" type="submit">Save Task</button>
+</form>

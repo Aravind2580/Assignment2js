@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f2f6fc;
+  color: #333;
+}
+
+.navbar-custom {
+  background: linear-gradient(to right, #4b6cb7, #182848);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff !important;
+}
+
+.card {
+  border: none;
+  border-left: 5px solid #0d6efd;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card.border-success {
+  border-left-color: #28a745;
+}
+.card.border-warning {
+  border-left-color: #ffc107;
+}
+
+.btn-primary {
+  background-color: #4b6cb7;
+  border-color: #4b6cb7;
+}
+
+.btn-primary:hover {
+  background-color: #3f5ca7;
+  border-color: #3f5ca7;
+}

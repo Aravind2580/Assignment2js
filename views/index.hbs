@@ -1,0 +1,13 @@
+<h1 class="text-center">Welcome to TaskFlow</h1>
+<p class="text-center">Your personal task manager. Organize, prioritize, and stay productive.</p>
+
+{{#if user}}
+  <div class="text-center">
+    <a class="btn btn-primary" href="/tasks">Go to My Tasks</a>
+  </div>
+{{else}}
+  <div class="text-center mt-4">
+    <a class="btn btn-success me-2" href="/auth/register">Get Started</a>
+    <a class="btn btn-outline-light" href="/auth/login">Login</a>
+  </div>
+{{/if}}

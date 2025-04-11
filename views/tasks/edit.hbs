@@ -1,0 +1,28 @@
+<h2>Edit Task</h2>
+<form method="POST" action="/tasks/edit/{{task._id}}">
+  <div class="mb-3">
+    <label>Title</label>
+    <input class="form-control" type="text" name="title" value="{{task.title}}" required>
+  </div>
+  <div class="mb-3">
+    <label>Due Date</label>
+    <input class="form-control" type="date" name="dueDate" value="{{task.dueDate}}">
+  </div>
+  <div class="mb-3">
+    <label>Priority</label>
+    <select class="form-control" name="priority">
+      <option {{#ifEquals task.priority "Low"}}selected{{/ifEquals}}>Low</option>
+      <option {{#ifEquals task.priority "Medium"}}selected{{/ifEquals}}>Medium</option>
+      <option {{#ifEquals task.priority "High"}}selected{{/ifEquals}}>High</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label>Notes</label>
+    <textarea class="form-control" name="notes">{{task.notes}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label>Completed</label>
+    <input type="checkbox" name="completed" {{#if task.completed}}checked{{/if}}>
+  </div>
+  <button class="btn btn-primary" type="submit">Update</button>
+</form>
